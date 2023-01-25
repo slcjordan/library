@@ -1,0 +1,14 @@
+FROM golang:1.18-alpine AS builder
+RUN apk update && apk add --no-cache git build-base
+WORKDIR $GOPATH/src/github.com/slcjordan/library
+COPY . .
+
+# only run unit tests
+RUN go test -race -v $(go list ./... | grep -v 'test/integration')
+WORKDIR  $GOPATH/src/github.com/slcjordan/library/cmd/api
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /go/bin/api
+ENTRYPOINT ["/go/bin/api"]
+
+FROM scratch
+COPY --from=builder /go/bin/api /go/bin/api
+ENTRYPOINT ["/go/bin/api"]

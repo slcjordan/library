@@ -1,0 +1,8 @@
+version: 1
+packages:
+  - path: "."
+    name: "sqlc"
+    engine: "postgresql"
+    schema: "schema.sql"
+    queries: "."
+    sql_package: "pgx/v4"

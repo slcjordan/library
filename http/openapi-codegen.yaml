@@ -1,0 +1,4 @@
+package: http
+generate:
+  chi-server: true
+  models: true

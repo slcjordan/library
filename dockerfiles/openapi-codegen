@@ -1,0 +1,9 @@
+FROM node:18.7.0
+
+RUN apt-get update && apt-get install -y curl
+RUN curl -L --output yq https://github.com/mikefarah/yq/releases/download/v4.30.8/yq_linux_amd64
+RUN chmod 700 ./yq && cp yq /usr/bin
+
+RUN npm install -g widdershins
+
+ENTRYPOINT []
