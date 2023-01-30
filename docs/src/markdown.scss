@@ -1,0 +1,64 @@
+
+.markdown h1 {
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+};
+
+.markdown h2 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+};
+
+.markdown h3 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1rem; /* 32px */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+};
+
+.markdown table , th, td  {
+    padding: 1rem;
+    border: 1px solid;
+    border-color: black
+}
+
+.markdown pre {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: black;
+    color: white;
+}
+
+.markdown p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-left-width: 3px;
+    padding-left: 1rem;
+    border-color: black;
+    border-radius: 0.25rem;
+}
+
+.markdown a:visited {
+    color: blue;
+}
+
+.markdown a:link {
+    color: blue;
+}
+
+.markdown ul {
+    padding-left: 2rem;
+}
+
+.markdown li:before {
+    content:"• ";
+}
+
+.markdown a:hover {
+    text-decoration: underline;
+}

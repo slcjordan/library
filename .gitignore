@@ -1,0 +1,4 @@
+.cache
+.envrc
+default.nix
+node_modules
