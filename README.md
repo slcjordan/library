@@ -1,7 +1,5 @@
 # Library
 
-The library project is part of a coding interview for Jordan Crabtree.
-
 [project page](https://github.com/slcjordan/library)
 
 ## Table of contents
