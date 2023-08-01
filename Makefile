@@ -70,10 +70,10 @@ docs-app-build: make-cache ## Build docs web app
 		--interactive \
 		--tty \
 		--rm \
-		--volume ${PWD}:${PWD} \
 		--volume ${PWD}/.cache/node_modules:${PWD}/docs/node_modules \
+		--volume ${PWD}:${PWD} \
 		--workdir ${PWD}/docs \
-		node:${NODE_VERSION} npm install && npm --prefix docs run build
+		node:${NODE_VERSION} bash -c "npm install && npm run build"
 	touch .cache/make/docs-app-build
 
 .PHONY: docs-go
